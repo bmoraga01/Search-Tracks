@@ -1,14 +1,15 @@
-
 # Prueba Técnica - Información de Bandas Musicales
 
 Este repositorio contiene una aplicación web que permite consultar canciones de una banda musical. La aplicación está desarrollada con **React** (TypeScript) para el frontend y **Flask** para el backend.
+
 ## Requisitos Previos
 
 Asegúrate de tener instalado lo siguiente en tu máquina:
 
-- [Python](https://www.python.org/downloads/) (3.10 o superior)
-- [Node.js](https://nodejs.org/) (14 o superior)
+- [Python](https://www.python.org/downloads/) (3.12 o superior)
+- [Node.js](https://nodejs.org/) (20 o superior)
 - [npm](https://www.npmjs.com/get-npm) (se instala junto con Node.js)
+
 ## Instalación y Configuración del Backend
 
 1. **Ingresa a la carpeta `backend` y abre una consola.**
@@ -20,11 +21,11 @@ Asegúrate de tener instalado lo siguiente en tu máquina:
    python -m venv ENV
    ```
 3. **Activa el entorno virtual.**
-En macOS/Linux:
+   En macOS/Linux:
    ```bash
    source ENV/bin/activate
    ```
-En Windows:
+   En Windows:
    ```bash
    ENV\Scripts\activate
    ```
@@ -52,10 +53,11 @@ En Windows:
    ```bash
    flask run --debug
    ```
-Asegúrate de que Flask esté iniciado en el puerto 5000; si no, ejecútalo con:
+   Asegúrate de que Flask esté iniciado en el puerto 5000; si no, ejecútalo con:
    ```bash
    flask run --debug --port 5000
    ```
+
 ## Instalación del Frontend
 
 1. **Ingresa a la carpeta frontend y abre una consola.**
@@ -71,15 +73,24 @@ Asegúrate de que Flask esté iniciado en el puerto 5000; si no, ejecútalo con:
    npm run dev
    ```
 4. **Accede a la aplicación en tu navegador.**
-* Visita `http://localhost:5173`
+
+- Visita `http://localhost:5173`
+
 ## Uso de la Aplicación
+
 Al ingresar a la aplicación, verás un formulario donde puedes escribir el nombre de una banda o artista (asegúrate de que esté correctamente escrito; de lo contrario, verás una tabla vacía). Presiona el botón Buscar Banda, lo que cargará una tabla con las canciones y álbumes de la banda. Además, podrás escuchar una fracción de la canción pulsando en el icono de play y pause para detener.
+
 ## API Externa
 
-La aplicación utiliza la API pública de iTunes para retornar información sobre productos asociados a bandas musicales. Puedes consultar la API en: 
-* `https://itunes.apple.com/search?term=nombre_de_banda_a_buscar`
+La aplicación utiliza la API pública de iTunes para retornar información sobre productos asociados a bandas musicales. Puedes consultar la API en:
+
+- `https://itunes.apple.com/search?term=nombre_de_banda_a_buscar`
+
 ## Estructura de la API
-* **GET** `/search_tracks?name={nombre_banda}`: Retorna información de canciones de una banda musical.
-* **POST** `/favoritos`: Marca una canción como favorita.
+
+- **GET** `/search_tracks?name={nombre_banda}`: Retorna información de canciones de una banda musical.
+- **POST** `/favoritos`: Marca una canción como favorita.
+
 ## Entregable
+
 Este repositorio contiene el código fuente de la aplicación y un archivo README con todo lo necesario para levantar las aplicaciones.
